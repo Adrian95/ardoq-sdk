@@ -4,3 +4,11 @@ Publishing/
 tests/
 .vscode/
 *.log
+.gitignore
+.eslintrc.json
+eslint.config.js
+Ardoq-swagger-api.json
+CONTRIBUTING.md
+package-lock.json
+exportedData.csv
+exportedData.json

@@ -8,10 +8,24 @@ This Node.js SDK simplifies interactions with the [Ardoq Public API](https://ard
 
 ## Installation
 
-Install the SDK via npm:
+Install the package using npm:
 
 ```bash
 npm install ardoq-sdk
+```
+
+## Usage
+
+Here is a quick example of how to use the SDK:
+
+```javascript
+const Ardoq = require('ardoq-sdk');
+
+const client = new Ardoq({ apiKey: 'your-api-key' });
+
+client.getWorkspace('workspace-id')
+  .then(workspace => console.log(workspace))
+  .catch(err => console.error(err));
 ```
 
 ## Quick Start
@@ -177,7 +191,7 @@ Verify your network connection and ensure that the Ardoq API is accessible from 
 
 ## Contributing
 
-Contributions are welcome! See [CONTRIBUTING.md](./CONTRIBUTING.md) for details.
+See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on how to contribute to this project.
 
 ## License
 
