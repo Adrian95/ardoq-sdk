@@ -1,0 +1,12 @@
+[
+  {
+    "id": 1,
+    "name": "Component A",
+    "type": "Type 1"
+  },
+  {
+    "id": 2,
+    "name": "Component B",
+    "type": "Type 2"
+  }
+]
