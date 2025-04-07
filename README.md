@@ -168,6 +168,29 @@ Runs a report and returns the results. Options include:
 Performs batch operations. Data should include:
 - `components.create`: An array of components to create.
 
+## Repository Structure
+
+The repository is organized as follows:
+
+```
+/ardoq-sdk
+├── src/                # Source code for the SDK
+│   ├── actions/        # Action modules for API operations
+│   ├── utils/          # Utility functions
+│   ├── ardoq.js        # Main SDK logic
+│   ├── cli.js          # Command-line interface
+│   ├── examples.js     # Example usage scripts
+│   └── index.js        # Entry point for the SDK
+├── .gitignore          # Git ignore rules
+├── .npmignore          # NPM ignore rules
+├── LICENSE             # License information
+├── package.json        # Project metadata and dependencies
+├── README.md           # Documentation
+└── exportedData.*      # Example exported data files
+```
+
+This structure ensures a clean separation of concerns and makes it easy to navigate the codebase.
+
 ## Troubleshooting
 
 ### Common Issues
