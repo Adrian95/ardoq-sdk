@@ -24,7 +24,7 @@ dotenv.config();
 const client = new ArdoqClient(process.env.ARDOQ_API_TOKEN);
 
 // Example of setting the subdomain dynamically
-client.setSubdomain("yoursubdomain");
+client.setSubdomain("titantech.us");
 
 export {
   ArdoqClient,

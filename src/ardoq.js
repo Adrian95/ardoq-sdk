@@ -10,9 +10,7 @@ const logger = winston.createLogger({
     winston.format.timestamp(),
     winston.format.json()
   ),
-  transports: [
-    new winston.transports.Console(),
-  ],
+  transports: [new winston.transports.Console()],
 });
 
 /**
@@ -33,6 +31,7 @@ export class ArdoqError extends Error {
 export class ArdoqClient {
   constructor(token = process.env.ARDOQ_API_TOKEN, options = {}) {
     if (!token) throw new Error("Authentication token is required");
+    this.apiToken = token; // Added this line
     this.token = token;
     this.subdomain = options.subdomain || null;
     const baseURL =
@@ -88,7 +87,11 @@ export class ArdoqClient {
         status: error.response.status,
         data: error.response.data,
       });
-      return new ArdoqError(errorMessage, error.response.status, error.response.data);
+      return new ArdoqError(
+        errorMessage,
+        error.response.status,
+        error.response.data
+      );
     } else if (error.request) {
       const errorMessage = "No response received";
       logger.error(errorMessage);

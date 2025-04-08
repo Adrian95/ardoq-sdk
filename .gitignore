@@ -1,11 +1,23 @@
 # Removed .npmignore as this is no longer an npm library
 # Added exclusions for GitHub project
 .vscode/
+
+# Node.js dependencies
 node_modules/
+
+# Environment variables
 .env
-.DS_Store
-coverage/
+
+# Logs
+logs/
 *.log
+
+# OS-specific files
+.DS_Store
+
+# Test coverage
+coverage/
+
 dist/
 exportedData.csv
 exportedData.json
