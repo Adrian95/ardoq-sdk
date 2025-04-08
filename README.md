@@ -108,6 +108,32 @@ const batchResult = await client.batch(batchData);
 console.log(batchResult);
 ```
 
+## Updates
+
+### Removed `.npmignore`
+The `.npmignore` file has been removed as this project is no longer intended to be published as an npm package. Instead, the `.gitignore` file has been updated to exclude unnecessary files for GitHub.
+
+### Updated `.gitignore`
+The `.gitignore` file now includes:
+- `.vscode/` for local editor settings.
+- `tests/` and `Publishing/` directories.
+- `package-lock.json` to avoid committing lock files.
+
+### Simplified `package.json`
+The `package.json` file has been updated:
+- Removed the `bin` field and CLI installation instructions.
+- Removed `build` and `watch` scripts as the project no longer uses Babel for transpilation.
+- Simplified dependencies by removing unused packages like `prompt-sync` and Babel-related dependencies.
+
+### CLI Usage
+The CLI commands remain functional but are now directly executed using Node.js without additional setup. For example:
+
+```bash
+node src/cli.js list-workspaces
+```
+
+Refer to `src/cli.js` for all available commands.
+
 ## CLI Usage
 
 The SDK includes a CLI for quick interactions. Example commands:
@@ -182,7 +208,6 @@ The repository is organized as follows:
 │   ├── examples.js     # Example usage scripts
 │   └── index.js        # Entry point for the SDK
 ├── .gitignore          # Git ignore rules
-├── .npmignore          # NPM ignore rules
 ├── LICENSE             # License information
 ├── package.json        # Project metadata and dependencies
 ├── README.md           # Documentation

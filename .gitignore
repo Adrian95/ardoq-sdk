@@ -1,3 +1,6 @@
+# Removed .npmignore as this is no longer an npm library
+# Added exclusions for GitHub project
+.vscode/
 node_modules/
 .env
 .DS_Store
@@ -6,3 +9,6 @@ coverage/
 dist/
 exportedData.csv
 exportedData.json
+package-lock.json
+Publishing/
+tests/
